@@ -1,0 +1,178 @@
+# Mini Knowledge Vault — Project Context
+
+> Konteks singkat untuk melanjutkan project pada sesi berikutnya.
+
+## Project
+
+**Nama:** Mini Knowledge Vault  
+**Bahasa:** Python  
+**Interface:** CLI / Terminal  
+**Tujuan:** Aplikasi sederhana untuk menyimpan dan mengelola catatan pengetahuan pribadi.
+
+Project ini dibuat sebagai **media belajar fundamental programming**, bukan untuk langsung membuat aplikasi yang kompleks.
+
+---
+
+## Progress
+
+### Day 1 — Requirements ✅
+
+Sudah membuat:
+
+```text
+docs/requirements.md
+```
+
+Berisi kebutuhan dasar aplikasi, pengguna, tujuan, fitur, input, output, dan batasan.
+
+### Day 2 — Planning / SRS ✅
+
+Sudah membuat:
+
+```text
+docs/software-requirements.md
+```
+
+Berisi SRS, functional requirements, non-functional requirements, alur aplikasi, model data, dan roadmap pengembangan.
+
+### Day 3 — Fundamental Programming ✅
+
+Sudah membuat:
+
+```text
+main.py
+README.md
+```
+
+Konsep yang dipraktikkan:
+
+- Variable
+- List
+- Dictionary
+- Function
+- Input / Output
+- `if`, `elif`, `else`
+- `for`
+- `while`
+- Comparison
+- Logical operator
+- String method
+
+Walaupun materi pembelajaran menggunakan JavaScript, project ini dipraktikkan menggunakan Python.
+
+---
+
+## Kondisi Project Saat Ini
+
+Struktur:
+
+```text
+mini-knowledge-vault/
+├── main.py
+├── README.md
+└── docs/
+    ├── requirements.md
+    └── software-requirements.md
+```
+
+Data masih disimpan di memory:
+
+```python
+knowledge = []
+```
+
+Belum menggunakan:
+
+- JSON
+- File handling
+- Database
+- Login
+- API
+- Frontend
+- OOP / Class
+
+---
+
+## Fitur Saat Ini
+
+`main.py` sudah memiliki:
+
+```text
+1. Add Knowledge
+2. View Knowledge
+3. Search Knowledge
+4. Exit
+```
+
+Function utama:
+
+```text
+show_menu()
+add_knowledge()
+view_knowledge()
+search_knowledge()
+main()
+```
+
+Data setiap catatan memiliki:
+
+```text
+topic
+title
+content
+```
+
+Data **belum persistent**, sehingga akan hilang ketika program ditutup.
+
+---
+
+## Roadmap
+
+Pengembangan dilakukan bertahap:
+
+```text
+Day 1 → Requirements              ✅
+Day 2 → SRS / Planning            ✅
+Day 3 → Fundamental Programming   ✅
+       → Add / View / Search      ✅
+       → Exit                     ✅
+
+Berikutnya:
+       → Delete
+       → Edit
+       → File Handling
+       → JSON Persistence
+       → Improvement
+```
+
+Fitur tidak perlu dibuat sekaligus. Setiap fitur harus tetap berhubungan dengan materi yang sedang dipelajari.
+
+---
+
+## Cara Kita Bekerja
+
+Saat melanjutkan project:
+
+1. Jangan mengulang Day 1–3.
+2. Gunakan kondisi project terakhir sebagai titik awal.
+3. Tetap prioritaskan konsep fundamental.
+4. Jangan menambahkan teknologi kompleks tanpa kebutuhan.
+5. Jika membuat kode, berikan versi **siap copas**.
+6. Jika ada kesalahan konsep, koreksi secara singkat.
+7. Jika `main.py` sudah berubah, gunakan versi terbaru yang saya kirim sebagai sumber kondisi kode.
+
+**Prinsip utama:**
+
+> Belajar → praktik → uji → evaluasi → modifikasi → review.
+
+---
+
+## Checkpoint
+
+Saat ini project berada setelah **Day 3 selesai**.
+
+Jika saya mengatakan:
+
+> **"Lanjutkan project Mini Knowledge Vault."**
+
+Pahami bahwa saya ingin melanjutkan dari checkpoint ini, bukan memulai dari awal.
