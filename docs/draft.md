@@ -2,17 +2,11 @@
 
 ## Konsep
 
-Mini Knowledge Vault adalah program terminal sederhana untuk menyimpan,
-melihat, mencari, dan mengelola catatan pengetahuan yang diperoleh selama belajar.
-
-Program ini dibuat sebagai media praktik untuk menerapkan konsep dasar
-pemrograman secara bertahap.
-
-Program tidak menggunakan login, database, frontend, API, framework,
-atau teknologi yang kompleks.
+Mini Knowledge Vault adalah program berbasis terminal untuk menyimpan, melihat, mencari, dan mengelola catatan pengetahuan yang diperoleh selama proses belajar.
 
 Contoh penggunaan:
 
+```text
 === MINI KNOWLEDGE VAULT ===
 
 1. Tambah catatan
@@ -23,340 +17,326 @@ Contoh penggunaan:
 
 Pilih menu: 1
 
-Topik    : JavaScript
-Judul    : Variabel
-Catatan  : Variabel digunakan untuk menyimpan sebuah nilai.
+Topik    : Python
+Judul    : List Comprehension
+Catatan  : Cara membuat list dengan sintaks yang lebih ringkas.
 
 Catatan berhasil disimpan!
+```
 
+Aplikasi dirancang sesederhana mungkin agar dapat digunakan sebagai media belajar fundamental pemrograman.
 
-==================================================
-MODUL 1 — MEMAHAMI KEBUTUHAN APLIKASI
-==================================================
+Pada tahap awal, aplikasi tidak membutuhkan:
 
-Tujuan:
-Belajar memahami masalah dan menentukan kebutuhan aplikasi sebelum
-mulai membuat kode.
+* Login atau autentikasi.
+* Database.
+* Frontend atau antarmuka web.
+* API.
+* Koneksi internet.
+* Framework.
+* Sinkronisasi antarperangkat.
+* Fitur kolaborasi.
+
+---
+
+# Pembagian Project Berdasarkan 5 Modul
+
+Project Mini Knowledge Vault dikerjakan secara bertahap mengikuti proses belajar:
+
+```text
+Modul 1 → Memahami Kebutuhan Aplikasi
+    ↓
+Modul 2 → Perencanaan Aplikasi
+    ↓
+Modul 3 → Mengerti Konsep Dasar Pemrograman
+    ↓
+Modul 4 → Eksplorasi & Modifikasi Aplikasi
+    ↓
+Modul 5 → Dokumentasi & Publish
+```
+
+Setiap tahap memiliki tujuan dan hasil yang berbeda.
+
+---
+
+# 1. Memahami Kebutuhan Aplikasi
+
+## Tujuan
+
+Belajar memahami dan mendefinisikan masalah sebelum mulai coding.
 
 Pada tahap ini belum membuat program.
 
-Yang perlu ditentukan:
+Fokus utama adalah menjawab:
 
-- Masalah yang ingin diselesaikan
-- Siapa pengguna aplikasi
-- Tujuan aplikasi
-- Fitur utama
-- Input yang dibutuhkan
-- Output yang dihasilkan
-- Batasan aplikasi
+* Masalah apa yang ingin diselesaikan?
+* Siapa pengguna aplikasi?
+* Apa tujuan aplikasi?
+* Fitur apa yang dibutuhkan?
+* Input apa yang diberikan pengguna?
+* Output apa yang dihasilkan aplikasi?
+* Apa saja batasan aplikasi?
 
-Masalah:
+## Output Modul
 
-Ketika belajar pemrograman, kita sering mendapatkan berbagai informasi
-kecil yang penting. Jika informasi tersebut hanya disimpan di berbagai
-tempat, akan sulit untuk mencarinya kembali.
+```text
+mini-knowledge-vault/
+└── docs/
+    └── requirements.md
+```
 
-Solusi:
+Dokumen `requirements.md` berisi kebutuhan pengguna dan ruang lingkup awal aplikasi.
 
-Membuat program sederhana yang dapat digunakan untuk menyimpan
-pengetahuan atau catatan belajar secara terstruktur.
+Contoh permasalahan:
 
-Tujuan:
+> Saya membutuhkan tempat sederhana untuk menyimpan pengetahuan kecil yang saya dapat ketika belajar, sehingga saya tidak perlu mencari kembali catatan tersebut.
 
-Membuat tempat sederhana untuk menyimpan pengetahuan kecil yang
-didapat selama belajar sehingga catatan tersebut dapat dicari dan
-digunakan kembali dengan mudah.
+Pada tahap ini fokusnya adalah **memahami apa yang harus dibuat**, bukan bagaimana cara membuatnya.
 
-Target pengguna:
+---
 
-Pelajar atau siapa saja yang sedang mempelajari pemrograman dan ingin
-menyimpan catatan pengetahuan secara sederhana.
+# 2. Perencanaan Aplikasi
 
-Fitur utama:
+Setelah kebutuhan aplikasi dipahami, tahap berikutnya adalah merencanakan bagaimana aplikasi akan bekerja.
 
-1. Tambah catatan
-2. Lihat semua catatan
-3. Cari catatan
-4. Hapus catatan
-5. Keluar dari program
+Pada tahap ini belum membuat implementasi program secara lengkap.
 
-Input:
+Kita mulai menerjemahkan requirement menjadi alur proses.
 
-- Topik
-- Judul
-- Isi catatan
-- Pilihan menu
-- Kata kunci pencarian
-- Identitas catatan yang ingin dihapus
+Contoh alur utama:
 
-Output:
-
-- Daftar catatan
-- Hasil pencarian
-- Pesan keberhasilan
-- Pesan kesalahan
-- Menu aplikasi
-
-Batasan:
-
-- Berbasis terminal
-- Tidak menggunakan database
-- Tidak menggunakan frontend
-- Tidak menggunakan API
-- Tidak menggunakan login
-- Tidak menggunakan framework
-- Pada tahap awal data hanya disimpan selama program berjalan
-
-
-==================================================
-MODUL 2 — PERENCANAAN APLIKASI
-==================================================
-
-Tujuan:
-Menentukan bagaimana aplikasi akan bekerja sebelum implementasi.
-
-Flow utama:
-
+```text
 Mulai
   ↓
 Tampilkan Menu
   ↓
 Pilih Menu
-  │
-  ├── 1. Tambah Catatan
-  │       ↓
-  │     Input data
-  │       ↓
-  │     Simpan catatan
-  │       ↓
-  │     Kembali ke menu
-  │
-  ├── 2. Lihat Catatan
-  │       ↓
-  │     Tampilkan semua catatan
-  │       ↓
-  │     Kembali ke menu
-  │
-  ├── 3. Cari Catatan
-  │       ↓
-  │     Input kata kunci
-  │       ↓
-  │     Cari catatan
-  │       ↓
-  │     Tampilkan hasil
-  │       ↓
-  │     Kembali ke menu
-  │
-  ├── 4. Hapus Catatan
-  │       ↓
-  │     Pilih catatan
-  │       ↓
-  │     Hapus catatan
-  │       ↓
-  │     Kembali ke menu
-  │
-  └── 5. Keluar
-          ↓
-        Selesai
+  ├── Tambah → Masukkan Data → Simpan
+  ├── Lihat → Tampilkan Catatan
+  ├── Cari → Masukkan Kata Kunci → Tampilkan Hasil
+  ├── Hapus → Pilih Catatan → Hapus
+  └── Keluar → Selesai
+  ↓
+Kembali ke Menu
+```
 
+Aplikasi akan terus kembali ke menu utama sampai pengguna memilih menu keluar.
 
-Struktur repository tahap perencanaan:
+## Output Modul
 
+Repository mulai memiliki dokumentasi perencanaan:
+
+```text
 mini-knowledge-vault/
-│
-├── README.md
-│
-└── docs/
-    ├── requirements.md
-    └── flowchart.png
+├── docs/
+│   ├── requirements.md
+│   └── flowchart.png
+└── README.md
+```
 
+Flowchart digunakan untuk menggambarkan alur aplikasi sebelum diterjemahkan menjadi kode.
 
-Pada tahap ini belum perlu membuat program secara lengkap.
+Pada tahap ini fokusnya adalah:
 
+> **Memahami bagaimana program akan berjalan sebelum menulis kode.**
 
-==================================================
-MODUL 3 — MENGERTI KONSEP DASAR PEMROGRAMAN
-==================================================
+---
 
-Tujuan:
-Mulai membuat program dengan menerapkan fundamental pemrograman.
+# 3. Mengerti Konsep Dasar Pemrograman
 
-Versi awal dibuat sesederhana mungkin.
+Pada tahap ini kita mulai masuk ke implementasi program.
 
-Struktur:
+Tujuan utamanya bukan membuat aplikasi yang kompleks, tetapi menggunakan project sebagai media untuk memahami fundamental pemrograman.
 
+Implementasi awal menggunakan Python.
+
+Struktur paling sederhana:
+
+```text
 mini-knowledge-vault/
-│
 ├── main.py
 └── README.md
+```
 
+Pada versi awal, data belum perlu disimpan secara permanen ke file.
 
-Data awal:
+Secara konseptual, data dapat disimpan sementara di dalam program:
 
+```python
 knowledge = []
+```
 
+Kemudian program mulai dikembangkan menggunakan konsep fundamental seperti:
 
-Konsep yang akan dipraktikkan:
+* Variable.
+* String.
+* Number.
+* Boolean.
+* List.
+* Dictionary.
+* Function.
+* Conditional statement.
+* `if`.
+* `elif`.
+* `else`.
+* `for`.
+* `while`.
+* Input.
+* Output.
+* Operator perbandingan.
+* Operator logika.
 
-- Variable
-- Tipe data
-- List
-- Dictionary
-- Function
-- Input
-- Output
-- If / else
-- For
-- While
-- Operator
-- Logika pemrograman
+Contoh pembagian fungsi:
 
-
-Contoh struktur data:
-
-knowledge = [
-    {
-        "topic": "JavaScript",
-        "title": "Variabel",
-        "note": "Variabel digunakan untuk menyimpan nilai."
-    }
-]
-
-
-Function yang akan dibuat secara bertahap:
-
+```text
 add_knowledge()
 view_knowledge()
 search_knowledge()
 delete_knowledge()
+```
 
+Setiap fungsi memiliki tanggung jawab tertentu sehingga kode dapat dipahami dan dikembangkan secara bertahap.
 
-Alur program:
+## Fokus Modul
 
-while program masih berjalan:
+Pada tahap ini fokus utama adalah:
 
-    tampilkan menu
+> **Memahami konsep fundamental melalui masalah nyata yang ada di dalam project.**
 
-    minta pilihan pengguna
+Kita tidak langsung menggunakan framework atau teknologi tambahan.
 
-    jika pilihan = 1:
-        tambah catatan
+---
 
-    jika pilihan = 2:
-        tampilkan catatan
+# 4. Eksplorasi & Modifikasi Aplikasi
 
-    jika pilihan = 3:
-        cari catatan
+Setelah versi dasar selesai, kita mulai mengevaluasi aplikasi dan bertanya:
 
-    jika pilihan = 4:
-        hapus catatan
+> "Apa yang bisa saya eksplorasi atau tingkatkan dari program ini?"
 
-    jika pilihan = 5:
-        keluar
+Fitur tambahan tidak harus ditentukan seluruhnya sejak awal.
 
-    selain itu:
-        tampilkan pesan pilihan tidak valid
+Pengembangan dilakukan berdasarkan:
 
+* kebutuhan aplikasi,
+* konsep yang sedang dipelajari,
+* masalah yang ditemukan,
+* dan hal-hal yang ingin dieksplorasi.
 
-Tujuan utama modul ini bukan membuat program yang sempurna.
-
-Tujuannya adalah memahami bagaimana konsep fundamental pemrograman
-digunakan untuk membangun sebuah program nyata.
-
-
-==================================================
-MODUL 4 — MODIFIKASI DAN EKSPLORASI
-==================================================
-
-Tujuan:
-Mengembangkan program berdasarkan konsep baru yang dipelajari.
-
-Pengembangan dilakukan secara bertahap.
-
-Tidak perlu langsung membuat semua fitur.
-
-
-VERSI 1
+## Versi 1 — Basic Knowledge Vault
 
 Fitur:
 
-- Tambah catatan
-- Lihat catatan
-- Cari catatan
+```text
+1. Tambah catatan
+2. Lihat semua catatan
+3. Cari catatan
+4. Hapus catatan
+5. Keluar
+```
 
+Fokus utama:
 
-VERSI 2
+* Variable.
+* List.
+* Dictionary.
+* Function.
+* Conditional.
+* Loop.
+* Input dan output.
 
-Tambahkan:
+---
 
-- Hapus catatan
+## Versi 2 — Edit Feature
 
+Setelah versi dasar stabil, kita dapat menambahkan kemampuan untuk mengubah catatan yang sudah ada.
 
-VERSI 3
+Fitur menjadi:
 
-Tambahkan:
+```text
+1. Tambah catatan
+2. Lihat semua catatan
+3. Cari catatan
+4. Hapus catatan
+5. Edit catatan
+6. Keluar
+```
 
-- Edit catatan
+Fokus pembelajaran:
 
+* Mencari data tertentu.
+* Mengubah data.
+* Mengelola data yang sudah ada.
+* Memahami alur perubahan data.
 
-VERSI 4
+Fitur edit tidak menjadi bagian dari implementasi awal karena sengaja ditunda sebagai bahan eksplorasi berikutnya.
 
-Mulai mempelajari file handling.
+---
 
-Data yang sebelumnya hanya:
+## Versi 3 — Persistent Storage
 
+Setelah memahami penyimpanan data di dalam memory, kita dapat mengeksplorasi bagaimana membuat data tetap tersedia setelah program ditutup.
+
+Program yang sebelumnya menggunakan:
+
+```python
 knowledge = []
+```
 
-mulai disimpan ke:
+dikembangkan agar dapat menyimpan data ke file:
 
+```text
 data.json
+```
 
+Struktur project menjadi:
 
-Contoh:
+```text
+mini-knowledge-vault/
+├── main.py
+├── data.json
+└── README.md
+```
 
-{
-    "knowledge": [
-        {
-            "topic": "JavaScript",
-            "title": "Variabel",
-            "note": "Variabel digunakan untuk menyimpan nilai."
-        }
-    ]
-}
+Fokus pembelajaran:
 
+* File handling.
+* Membaca file.
+* Menulis file.
+* JSON.
+* Mengubah data Python menjadi JSON.
+* Membaca kembali data JSON ke dalam program.
 
-Pengembangan berikutnya dapat dilakukan berdasarkan materi yang
-dipelajari.
+---
 
-Contoh eksplorasi:
+## Versi Berikutnya — Improvement
 
-- File handling
-- JSON
-- Error handling
-- Validasi input
-- Pencarian yang lebih baik
-- Pengurutan catatan
-- Filter berdasarkan topik
-- Dan konsep lain yang relevan
+Setelah fitur dasar selesai, pengembangan berikutnya dapat dilakukan berdasarkan kebutuhan dan hasil eksplorasi.
 
+Contohnya:
 
-Prinsip pengembangan:
+* Validasi input yang lebih baik.
+* Error handling yang lebih baik.
+* Pencarian yang lebih fleksibel.
+* Pengelompokan catatan berdasarkan topik.
+* Perbaikan struktur kode.
+* Peningkatan tampilan terminal.
+* Fitur tambahan lain yang muncul selama proses belajar.
 
-Jangan membuat fitur hanya karena ingin program terlihat kompleks.
+Tidak semua fitur harus dibuat.
 
-Fitur ditambahkan karena ada kebutuhan atau karena menjadi kesempatan
-untuk mempraktikkan konsep yang sedang dipelajari.
+Prinsip utama project adalah:
 
+> **Fitur ditambahkan karena ada kebutuhan atau karena menjadi bagian dari proses eksplorasi belajar, bukan karena ingin membuat aplikasi terlihat kompleks.**
 
-==================================================
-MODUL 5 — DOKUMENTASI DAN PUBLISH
-==================================================
+---
 
-Tujuan:
-Merapikan project dan mendokumentasikan proses pembelajaran.
+# 5. Dokumentasi & Publish
 
-Struktur akhir:
+Setelah aplikasi selesai dikembangkan dan cukup stabil, repository dirapikan agar dapat digunakan sebagai dokumentasi perjalanan belajar.
 
+Struktur akhir yang direncanakan:
+
+```text
 mini-knowledge-vault/
 │
 ├── README.md
@@ -366,22 +346,29 @@ mini-knowledge-vault/
 └── docs/
     ├── requirements.md
     └── flowchart.png
+```
 
+Tidak semua file harus langsung tersedia sejak awal.
 
-README.md dapat berisi:
+`data.json`, misalnya, baru muncul setelah aplikasi memiliki fitur persistent storage.
 
+## README
+
+README menjelaskan secara singkat:
+
+```text
 # Mini Knowledge Vault
 
-Program sederhana berbasis terminal untuk menyimpan dan mengelola
-catatan pengetahuan selama proses belajar.
+Program sederhana berbasis terminal untuk menyimpan
+dan mengelola catatan pengetahuan.
 
 ## Features
 
 - Add knowledge
 - View knowledge
 - Search knowledge
-- Edit knowledge
 - Delete knowledge
+- Edit knowledge
 
 ## Technologies
 
@@ -389,36 +376,86 @@ catatan pengetahuan selama proses belajar.
 
 ## How to Run
 
-```bash
 python main.py
-````
+```
 
+Setelah proses belajar selesai, README juga dapat memiliki bagian:
+
+```text
 ## What I Learned
 
-* Menggunakan variable
-* Menggunakan list dan dictionary
-* Membuat function
-* Menggunakan conditional statement
-* Menggunakan looping
-* Mengolah input pengguna
-* Membaca dan menulis file JSON
-* Melakukan validasi input
-* Basic error handling
+- Working with lists and dictionaries
+- Creating reusable functions
+- Handling user input
+- Using conditional statements
+- Working with loops
+- Reading and writing JSON files
+- Basic error handling
+```
 
-==================================================
-RIWAYAT COMMIT
-==============
+Bagian ini penting karena repository tidak hanya menunjukkan hasil akhir aplikasi, tetapi juga menunjukkan **apa yang dipelajari selama proses pengembangan**.
 
-Commit tidak perlu banyak.
+---
 
-Yang penting setiap commit merepresentasikan perubahan yang benar-benar
-dilakukan.
+# Struktur Project Secara Bertahap
 
-Contoh:
+## Tahap Modul 1
 
+```text
+mini-knowledge-vault/
+└── docs/
+    └── requirements.md
+```
+
+## Tahap Modul 2
+
+```text
+mini-knowledge-vault/
+├── docs/
+│   ├── requirements.md
+│   └── flowchart.png
+└── README.md
+```
+
+## Tahap Modul 3
+
+```text
+mini-knowledge-vault/
+├── main.py
+├── README.md
+└── docs/
+    ├── requirements.md
+    └── flowchart.png
+```
+
+## Tahap Persistent Storage
+
+```text
+mini-knowledge-vault/
+├── main.py
+├── data.json
+├── README.md
+└── docs/
+    ├── requirements.md
+    └── flowchart.png
+```
+
+---
+
+# Perjalanan Commit
+
+Commit tidak perlu dibuat sebanyak mungkin.
+
+Yang penting setiap commit merepresentasikan perubahan yang benar-benar dilakukan.
+
+Contoh perjalanan:
+
+```text
 Initial project
 ↓
 Define application requirements
+↓
+Add software requirements
 ↓
 Add application flowchart
 ↓
@@ -430,100 +467,108 @@ Add search feature
 ↓
 Add delete feature
 ↓
-Add edit knowledge feature
+Add edit feature
 ↓
 Add JSON persistence
 ↓
-Improve input validation
-↓
 Improve error handling
 ↓
-Update documentation
+Add documentation
+```
 
-==================================================
-TUJUAN UTAMA PROJECT
-====================
+Tidak semua commit tersebut harus dibuat.
 
-Project ini bukan dibuat untuk menghasilkan aplikasi yang kompleks.
+Jika dalam prosesnya beberapa perubahan memang dilakukan sekaligus, satu commit dapat mewakili beberapa perubahan yang saling berkaitan.
 
-Project ini dibuat sebagai media belajar untuk mengubah teori
-pemrograman menjadi praktik.
+Prinsipnya:
 
-Urutan pembelajaran:
+> **Commit harus menggambarkan perjalanan pengembangan yang nyata, bukan mengejar jumlah commit.**
 
-Memahami kebutuhan
-↓
-Merencanakan program
-↓
-Memahami fundamental
-↓
-Menulis kode
-↓
-Menguji program
-↓
-Menemukan masalah
-↓
-Memodifikasi program
-↓
-Mempelajari konsep baru
-↓
-Menerapkan konsep baru
-↓
-Mendokumentasikan hasil
+---
 
-PRINSIP:
+# Prinsip Utama Project
 
-Jangan langsung mengejar aplikasi yang kompleks.
+Mini Knowledge Vault bukan hanya project untuk menghasilkan aplikasi terminal.
 
-Mulai dari program sederhana.
+Project ini digunakan sebagai **media belajar pemrograman**.
 
-Pahami setiap kode yang ditulis.
+Alur belajar yang digunakan:
 
-Jika menemukan konsep yang belum dipahami, pelajari konsep tersebut.
+```text
+Belajar konsep
+    ↓
+Pahami konsep
+    ↓
+Praktik kecil
+    ↓
+Hubungkan dengan project
+    ↓
+Implementasikan
+    ↓
+Temukan masalah
+    ↓
+Eksplorasi solusi
+    ↓
+Modifikasi project
+    ↓
+Review
+    ↓
+Dokumentasikan
+```
 
-Kemudian kembali ke project dan coba terapkan.
+Karena itu, aplikasi tidak perlu langsung memiliki banyak fitur.
 
-Dengan begitu, project berkembang mengikuti proses belajar,
-bukan proses belajar dipaksa mengikuti project.
+Kita mulai dari masalah sederhana, membuat solusi sederhana, kemudian mengembangkan aplikasi seiring bertambahnya pemahaman.
 
-==================================================
-HUBUNGAN DENGAN PEMBELAJARAN
-============================
+---
 
-Project Mini Knowledge Vault digunakan sebagai project praktik
-untuk menerapkan konsep pemrograman secara bertahap.
+# Roadmap Keseluruhan
 
-Konsep yang nantinya dapat diterapkan:
-
-Variable
-↓
-Tipe Data
-↓
-Operator
-↓
-Input / Output
-↓
-Function
-↓
-Conditional
-↓
-Looping
-↓
-List / Dictionary
-↓
+```text
+MODUL 1
+Memahami Kebutuhan
+        ↓
+requirements.md
+        ↓
+MODUL 2
+Perencanaan Aplikasi
+        ↓
+Flowchart + Algorithm
+        ↓
+MODUL 3
+Konsep Dasar Pemrograman
+        ↓
+Python Fundamental
+        ↓
+Mini Knowledge Vault V1
+        ↓
+MODUL 4
+Eksplorasi & Modifikasi
+        ↓
+Edit
+        ↓
 File Handling
-↓
-JSON
-↓
-Error Handling
-↓
-Konsep lanjutan
+        ↓
+JSON Persistence
+        ↓
+Improvement
+        ↓
+MODUL 5
+Dokumentasi & Publish
+        ↓
+README
+        ↓
+Review Project
+        ↓
+GitHub Repository
+```
 
-TARGET AKHIR:
+## Prinsip Belajar
 
-Saya tidak hanya memiliki sebuah program yang dapat dijalankan,
-tetapi juga memahami bagaimana program tersebut dibuat,
-mengapa kode tersebut dibuat dengan cara tersebut, dan konsep
-pemrograman apa yang saya pelajari dari proses pembuatannya.
+> **Jangan langsung coding.**
 
-**Catatan penting:** saya sengaja mempertahankan struktur **5 tahap/modul project** yang Anda berikan, meskipun sebelumnya Anda menyebut ada **4 modul materi pembelajaran**. Jadi keduanya tidak saya campur: **4 modul = materi yang Anda pelajari**, sedangkan **5 modul = tahapan pengerjaan Mini Knowledge Vault**.
+Kita mengikuti urutan:
+
+**Requirement → Planning → Algorithm → Flowchart → Coding → Eksplorasi → Dokumentasi**
+
+Dengan demikian, setiap tahap memiliki tujuan yang jelas dan setiap perubahan pada aplikasi dapat dikaitkan dengan proses belajar yang sedang dilakukan.
