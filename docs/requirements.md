@@ -1,245 +1,255 @@
 # Mini Knowledge Vault — User Requirements
 
-## 1. Latar Belakang
+## 1. Overview
 
-Dalam proses belajar, pengguna sering mendapatkan berbagai catatan pengetahuan atau hal-hal penting yang ingin disimpan untuk dipelajari kembali. Namun, pengguna dapat mengalami kesulitan untuk menyimpan dan menemukan kembali catatan tersebut secara sederhana dan terorganisir.
+Mini Knowledge Vault adalah aplikasi berbasis terminal yang digunakan untuk menyimpan dan mengelola catatan pengetahuan pribadi.
 
-Oleh karena itu, dibutuhkan sebuah tempat sederhana yang dapat membantu pengguna menyimpan, melihat, mencari, dan mengelola catatan pengetahuan yang diperoleh selama proses belajar.
-
-Mini Knowledge Vault dibuat sebagai aplikasi sederhana yang berfokus pada kebutuhan tersebut tanpa menambahkan kompleksitas yang belum diperlukan.
+Aplikasi ditujukan untuk pengguna yang membutuhkan tempat sederhana untuk mencatat informasi yang diperoleh selama proses belajar dan melihatnya kembali ketika diperlukan.
 
 ---
 
-## 2. Pengguna
+## 2. Purpose
 
-Aplikasi ditujukan untuk **pelajar atau siapa pun yang ingin menyimpan catatan pengetahuan pribadi** yang diperoleh dari proses belajar.
+Tujuan utama aplikasi adalah menyediakan cara sederhana bagi pengguna untuk:
 
-Pada tahap awal, aplikasi digunakan oleh satu pengguna untuk mengelola catatan pengetahuannya sendiri.
+- Menyimpan catatan pengetahuan.
+- Melihat catatan yang telah dibuat.
+- Mencari catatan tertentu.
+- Menghapus catatan yang tidak diperlukan.
+- Mengubah catatan yang perlu diperbarui.
 
----
-
-## 3. Tujuan Aplikasi
-
-Mini Knowledge Vault bertujuan untuk membantu pengguna:
-
-* Menyimpan catatan pengetahuan secara terorganisir.
-* Melihat kembali catatan yang telah disimpan.
-* Menemukan catatan tertentu dengan lebih mudah.
-* Menghapus catatan yang sudah tidak diperlukan.
-* Mengembangkan dan memperbarui catatan pada tahap pengembangan berikutnya.
-
-Tujuan utama aplikasi adalah menyediakan tempat sederhana untuk menyimpan dan mengelola pengetahuan yang diperoleh selama proses belajar.
+Aplikasi dibuat dengan pendekatan sederhana tanpa bergantung pada database, server, atau layanan eksternal.
 
 ---
 
-## 4. Kebutuhan Pengguna
+## 3. Target User
+
+Aplikasi ditujukan untuk:
+
+- Pelajar.
+- Pemula yang sedang belajar pemrograman.
+- Individu yang ingin menyimpan catatan pengetahuan pribadi.
+
+Pada versi saat ini, aplikasi digunakan oleh satu pengguna.
+
+---
+
+## 4. User Requirements
 
 Sebagai pengguna, saya ingin:
 
-1. Menambahkan catatan pengetahuan baru agar pengetahuan yang saya dapatkan dapat disimpan.
-2. Melihat seluruh catatan yang telah disimpan agar saya dapat meninjau kembali pengetahuan yang pernah dipelajari.
-3. Mencari catatan berdasarkan informasi tertentu agar saya dapat menemukan catatan yang dibutuhkan dengan lebih mudah.
+1. Menambahkan catatan pengetahuan baru agar informasi yang saya pelajari dapat disimpan.
+2. Melihat seluruh catatan agar saya dapat meninjau kembali informasi yang pernah disimpan.
+3. Mencari catatan berdasarkan kata kunci agar informasi tertentu dapat ditemukan dengan lebih mudah.
 4. Menghapus catatan yang sudah tidak diperlukan.
-5. Mengubah catatan yang sudah ada apabila terdapat informasi yang perlu diperbaiki atau diperbarui.
-
-Kebutuhan untuk mengubah catatan tetap menjadi bagian dari kebutuhan aplikasi, tetapi fitur tersebut tidak menjadi bagian dari implementasi versi awal.
+5. Mengedit catatan apabila terdapat informasi yang perlu diperbaiki atau diperbarui.
+6. Keluar dari aplikasi ketika sudah selesai menggunakannya.
 
 ---
 
-## 5. Informasi yang Disimpan
+## 5. Information Stored
 
-Setiap catatan pengetahuan setidaknya memiliki tiga informasi utama:
+Setiap catatan memiliki tiga informasi utama:
 
-* **Topik**
-* **Judul**
-* **Isi catatan**
+| Field | Description |
+|---|---|
+| Topik | Kategori atau bidang dari catatan |
+| Judul | Judul catatan |
+| Isi Catatan | Informasi atau penjelasan yang disimpan |
 
 Contoh:
 
-| Topik  | Judul              | Isi Catatan                                          |
-| ------ | ------------------ | ---------------------------------------------------- |
-| Python | List Comprehension | Cara membuat list dengan sintaks yang lebih ringkas. |
-
-Contoh lain:
-
 ```text
-Topik   : Git
-Judul   : Git Commit
-Catatan : Digunakan untuk menyimpan perubahan pada repository.
-```
+Topik   : Python
+Judul   : List Comprehension
+Catatan : Cara membuat list dengan sintaks yang lebih ringkas.
+````
 
 ---
 
-## 6. Fitur Utama
+## 6. Functional Requirements
 
-### 6.1 Fitur Versi Awal
+### FR-01 — Add Knowledge
 
-Versi awal aplikasi menyediakan kemampuan untuk:
+Aplikasi harus memungkinkan pengguna menambahkan catatan baru.
 
-* Menambah catatan.
-* Melihat seluruh catatan.
-* Mencari catatan.
-* Menghapus catatan.
-* Keluar dari aplikasi.
+Data yang dimasukkan:
 
-Menu utama versi awal:
+* Topik.
+* Judul.
+* Isi catatan.
 
-```text
-=== MINI KNOWLEDGE VAULT ===
-
-1. Tambah catatan
-2. Lihat semua catatan
-3. Cari catatan
-4. Hapus catatan
-5. Keluar
-```
-
-### 6.2 Fitur Pengembangan Berikutnya
-
-Setelah versi awal selesai dan dipahami, aplikasi dapat dikembangkan dengan fitur tambahan seperti:
-
-* Mengubah atau mengedit catatan.
-* Penyimpanan data secara permanen.
-* Validasi input yang lebih baik.
-* Pencarian yang lebih fleksibel.
-* Pengelompokan catatan berdasarkan topik.
-
-Fitur tambahan akan dikembangkan secara bertahap berdasarkan kebutuhan dan proses pembelajaran.
+Catatan baru harus disimpan selama aplikasi sedang berjalan.
 
 ---
 
-## 7. Input
+### FR-02 — View Knowledge
 
-Pengguna dapat memberikan informasi berupa:
+Aplikasi harus memungkinkan pengguna melihat seluruh catatan yang tersedia.
 
-### Saat Menambahkan Catatan
+Setiap catatan harus ditampilkan dengan informasi:
 
+* Nomor catatan.
+* Topik.
+* Judul.
+* Isi catatan.
+
+Jika belum ada catatan, aplikasi harus memberikan informasi kepada pengguna.
+
+---
+
+### FR-03 — Search Knowledge
+
+Aplikasi harus memungkinkan pengguna mencari catatan menggunakan kata kunci.
+
+Pencarian dilakukan terhadap:
+
+* Topik.
+* Judul.
+* Isi catatan.
+
+Pencarian tidak membedakan huruf besar dan huruf kecil.
+
+Jika tidak terdapat hasil yang sesuai, aplikasi harus memberikan informasi bahwa catatan tidak ditemukan.
+
+---
+
+### FR-04 — Delete Knowledge
+
+Aplikasi harus memungkinkan pengguna menghapus catatan berdasarkan nomor catatan.
+
+Aplikasi harus memeriksa input pengguna sebelum melakukan penghapusan.
+
+Jika nomor tidak valid atau tidak tersedia, data tidak boleh dihapus.
+
+---
+
+### FR-05 — Edit Knowledge
+
+Aplikasi harus memungkinkan pengguna mengubah catatan yang telah tersedia.
+
+Pengguna memilih catatan berdasarkan nomor, kemudian memasukkan data baru untuk:
+
+* Topik.
+* Judul.
+* Isi catatan.
+
+---
+
+### FR-06 — Exit Application
+
+Aplikasi harus menyediakan pilihan untuk keluar dari program.
+
+Ketika pengguna memilih menu keluar, aplikasi harus menghentikan proses program dengan memberikan pesan kepada pengguna.
+
+---
+
+## 7. Input Requirements
+
+Aplikasi menerima input berupa:
+
+* Pilihan menu.
 * Topik catatan.
 * Judul catatan.
 * Isi catatan.
-
-### Saat Mencari Catatan
-
-* Kata kunci atau informasi pencarian.
-
-### Saat Menghapus Catatan
-
-* Pilihan atau identitas catatan yang ingin dihapus.
-
-### Saat Memilih Menu
-
-* Pilihan menu yang tersedia pada aplikasi.
-
-Pada pengembangan berikutnya, input tambahan dapat digunakan untuk mengubah catatan.
+* Kata kunci pencarian.
+* Nomor catatan untuk operasi edit dan delete.
 
 ---
 
-## 8. Output
+## 8. Output Requirements
 
-Aplikasi memberikan informasi kepada pengguna berupa:
+Aplikasi memberikan output berupa:
 
-* Daftar catatan yang tersimpan.
-* Hasil pencarian catatan.
-* Informasi bahwa catatan berhasil ditambahkan.
-* Informasi bahwa catatan berhasil dihapus.
-* Informasi apabila catatan yang dicari tidak ditemukan.
-* Informasi apabila suatu tindakan tidak dapat dilakukan.
-* Informasi apabila pilihan menu tidak valid.
-* Pesan ketika pengguna keluar dari aplikasi.
-
-Pada pengembangan berikutnya, aplikasi juga dapat memberikan informasi bahwa sebuah catatan berhasil diperbarui.
+* Menu utama.
+* Daftar catatan.
+* Hasil pencarian.
+* Pesan keberhasilan operasi.
+* Pesan ketika data tidak ditemukan.
+* Pesan ketika input tidak valid.
+* Pesan ketika aplikasi dihentikan.
 
 ---
 
-## 9. Batasan Aplikasi
+## 9. Data Storage
 
-Pada tahap awal, aplikasi memiliki batasan sebagai berikut:
+Pada versi saat ini, data disimpan sementara di dalam memory aplikasi.
 
-* Digunakan untuk kebutuhan pribadi.
-* Digunakan oleh satu pengguna.
-* Tidak membutuhkan sistem login atau autentikasi.
-* Tidak membutuhkan koneksi internet.
-* Tidak membutuhkan fitur berbagi catatan.
-* Tidak mencakup sinkronisasi antarperangkat.
-* Fokus pada pengelolaan catatan pengetahuan sederhana.
-* Menggunakan antarmuka berbasis terminal.
-* Tidak menggunakan database pada versi awal.
-* Penyimpanan permanen belum menjadi bagian dari implementasi awal.
+Data tidak disimpan secara permanen.
 
-Batasan tersebut dapat berubah apabila kebutuhan aplikasi berkembang pada tahap berikutnya.
+Akibatnya, seluruh catatan akan hilang ketika program dihentikan.
+
+Persistent storage tidak termasuk dalam kebutuhan versi saat ini.
 
 ---
 
-## 10. Di Luar Cakupan Versi Awal
+## 10. Scope
 
-Fitur berikut tidak menjadi bagian dari versi awal aplikasi:
+### Included
 
-* Akun pengguna.
-* Login dan autentikasi.
-* Berbagi catatan.
-* Kolaborasi antar pengguna.
-* Notifikasi.
-* Integrasi dengan layanan eksternal.
-* Sinkronisasi antarperangkat.
-* Antarmuka berbasis web.
-* Antarmuka berbasis mobile.
+Versi saat ini mencakup:
+
+* Add knowledge.
+* View knowledge.
+* Search knowledge.
+* Delete knowledge.
+* Edit knowledge.
+* Exit application.
+
+### Not Included
+
+Versi saat ini tidak mencakup:
+
+* Login.
+* Authentication.
+* Multiple users.
 * Database.
 * API.
-* Penyimpanan permanen.
-* Fitur edit catatan.
+* Web interface.
+* Mobile interface.
+* Cloud storage.
+* Synchronization.
+* Collaboration.
+* Persistent storage.
 
-Fitur edit dan penyimpanan permanen dapat dipertimbangkan sebagai bagian dari pengembangan setelah versi awal selesai.
+Fitur di luar cakupan dapat dipertimbangkan pada pengembangan berikutnya.
 
 ---
 
-## 11. Kriteria Keberhasilan
+## 11. Constraints
 
-Aplikasi versi awal dianggap memenuhi kebutuhan apabila pengguna dapat:
+Aplikasi memiliki batasan:
+
+* Berjalan melalui terminal.
+* Menggunakan Python.
+* Data hanya disimpan selama program berjalan.
+* Tidak membutuhkan koneksi internet.
+* Tidak menggunakan database.
+* Tidak membutuhkan layanan eksternal.
+
+---
+
+## 12. Success Criteria
+
+Project dianggap memenuhi kebutuhan apabila pengguna dapat:
 
 1. Menjalankan aplikasi melalui terminal.
-2. Melihat menu utama.
-3. Menambahkan sebuah catatan pengetahuan.
-4. Melihat catatan yang telah ditambahkan.
-5. Mencari catatan berdasarkan informasi tertentu.
-6. Menghapus catatan yang telah tersedia.
-7. Kembali ke menu utama setelah melakukan operasi.
-8. Mendapatkan informasi ketika memasukkan pilihan yang tidak valid.
-9. Keluar dari aplikasi melalui menu yang tersedia.
-
-Kebutuhan untuk mengubah catatan akan menjadi bagian dari kriteria keberhasilan pada tahap pengembangan berikutnya setelah fitur edit diterapkan.
+2. Menambahkan catatan.
+3. Melihat catatan.
+4. Mencari catatan.
+5. Menghapus catatan.
+6. Mengedit catatan.
+7. Mendapatkan informasi ketika input tidak valid.
+8. Keluar dari aplikasi melalui menu yang tersedia.
 
 ---
 
-## 12. Prinsip Pengembangan
+## 13. Project Context
 
-Mini Knowledge Vault dikembangkan secara bertahap sebagai media pembelajaran pemrograman.
+Mini Knowledge Vault dikembangkan sebagai project pembelajaran setelah mempelajari dan menyelesaikan kelas:
 
-Pengembangan tidak dilakukan dengan memasukkan seluruh fitur sejak awal. Fitur akan ditambahkan berdasarkan kebutuhan aplikasi dan konsep pemrograman yang sedang dipelajari.
+**Memulai Dasar Pemrograman untuk Menjadi Pengembang Software**
 
-Alur pengembangan:
+dari Dicoding.
 
-```text
-Memahami kebutuhan
-        ↓
-Merancang solusi
-        ↓
-Membuat versi sederhana
-        ↓
-Menguji aplikasi
-        ↓
-Menemukan kebutuhan baru
-        ↓
-Mempelajari konsep baru
-        ↓
-Memodifikasi aplikasi
-        ↓
-Mendokumentasikan hasil
-```
-
-Dengan pendekatan tersebut, setiap perubahan pada aplikasi diharapkan memiliki alasan dan menjadi bagian dari proses pembelajaran.
-
----
-
-**Versi dokumen:** 1.1
-**Status:** Draft Requirement
-**Project:** Mini Knowledge Vault
+Konsep yang dipelajari kemudian diterapkan ke dalam sebuah aplikasi sederhana agar dapat dipraktikkan melalui project nyata.
